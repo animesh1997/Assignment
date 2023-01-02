@@ -1,0 +1,17 @@
+{%extends 'bank/index.html' %}
+
+{%block body%}
+
+<form action="" method="post" encrtype="multipart/form-data">
+{% csrf_token%}
+<!--<h1>{{form}}</h1> -->
+<!-- {% include 'music/form-template.html'%} -->
+{% include 'bank/form-template.html'%}
+<!--<input type="submit" value="submit">-->
+<button  tupe="submit">
+    Submit
+</button>
+
+</form>
+
+{%endblock%}

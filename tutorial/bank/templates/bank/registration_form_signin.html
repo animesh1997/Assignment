@@ -1,0 +1,16 @@
+
+
+{%block body%}
+
+<form action="" method="post" encrtype="multipart/form-data">
+{% csrf_token%}
+
+{% include 'bank/form-template.html'%}
+<!--<input type="submit" value="submit">-->
+<button  tupe="submit">
+    login
+</button>
+
+</form>
+
+{%endblock%}

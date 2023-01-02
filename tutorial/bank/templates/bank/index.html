@@ -1,0 +1,39 @@
+<html>
+    <h1>
+        welcome
+    </h1>
+    <h2>
+        {{request.user}}
+    </h2>
+    <h3>
+        account_number: {{obj.account_number}}
+    </h3>
+    <label>CreditCard</label>
+    <h3>
+        creditcard
+    </h3>
+    {% if creditcard == False %}
+    <a href="{% url 'bank:buycredit'%}">buy credit card</a>
+    {%else%} 
+    
+    <h2> {{creditcard}}</h2>
+    {%endif%}
+    <h4>
+        Balance : {{obj.balance}}
+    </h4>
+    <a href="{% url 'bank:logout'%}">Logout</a>
+
+    <h1>
+        Transfer
+    </h1>
+    
+   
+    <a href="{% url 'bank:download'%}">Download Statement</a>
+    <div>
+        <label>ADD/Transfer</label>
+        <a href="{% url 'bank:transactionadd'%}">Make Transactions</a>
+        <br>
+        <label>withdraw</label>
+        <a href="{% url 'bank:transactionwithdraw'%}">Make Transactions</a>
+        
+    </div>

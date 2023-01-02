@@ -1,0 +1,44 @@
+
+<html>
+    <h1>
+        welcome
+    </h1>
+    <h2>
+        {{request.user}}
+    </h2>
+    <h3>
+        account_number: {{obj.account_number}}
+    </h3>
+    <h4>
+        Balance : {{obj.balance}}
+    </h4>
+    <a href="{% url 'bank:logout'%}">Logout</a>
+
+<h1>
+    Transfer
+</h1>
+
+</form>
+
+
+<h2>
+    withdraw
+</h2>
+<form action="{% url 'bank:withdraw' %}" method="post" encrtype="multipart/form-data">
+    {% csrf_token%}
+   
+    
+    <div>
+    <label>Amount</label>
+    </div>
+   
+    <input type="text" id="amount" name="amount"><br><br>
+    
+    <!--<input type="submit" value="submit">-->
+    <button  tupe="submit">
+        Submit
+    </button>
+    
+    </form>
+
+</html>
