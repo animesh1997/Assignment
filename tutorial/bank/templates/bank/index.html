@@ -1,4 +1,6 @@
 <html>
+    
+
     <h1>
         welcome
     </h1>
@@ -26,12 +28,19 @@
     <h1>
         Transfer
     </h1>
+    <br>
+    <br>
+    
+
     
    
     <a href="{% url 'bank:download'%}">Download Statement</a>
     <div>
-        <label>ADD/Transfer</label>
+        <label>ADD</label>
         <a href="{% url 'bank:transactionadd'%}">Make Transactions</a>
+        <br>
+        <label>Tranfer</label>
+        <a href="{% url 'bank:transaction_transfer'%}">Make Transactions</a>
         <br>
         <label>withdraw</label>
         <a href="{% url 'bank:transactionwithdraw'%}">Make Transactions</a>
